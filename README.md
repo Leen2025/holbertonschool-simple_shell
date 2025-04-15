@@ -94,8 +94,9 @@ $
 
 'shell.h'  Header file with standard library includes, macros, and function prototypes used throughout the program.
 
-# Core Program Files
-'main.c'  Entry point of the program. Starts an infinite loop and calls the shell prompt.
+# Core Program Files:
+'main.c' 
+Entry point of the program. Starts an infinite loop and calls the shell prompt.
 
 'shell_loop.c'  Handles the main execution loop of the shell including reading, parsing, and executing user commands.
 
