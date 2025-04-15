@@ -48,38 +48,39 @@ $ echo "qwerty" | ./././hsh
 $
 
 # List of allowed functions and system calls
-access (man 2 access)
-chdir (man 2 chdir)
-close (man 2 close)
-closedir (man 3 closedir)
-execve (man 2 execve)
-exit (man 3 exit)
-_exit (man 2 _exit)
-fflush (man 3 fflush)
-fork (man 2 fork)
-free (man 3 free)
-getcwd (man 3 getcwd)
-getline (man 3 getline)
-getpid (man 2 getpid)
-isatty (man 3 isatty)
-kill (man 2 kill)
-malloc (man 3 malloc)
-open (man 2 open)
-opendir (man 3 opendir)
-perror (man 3 perror)
-read (man 2 read)
-readdir (man 3 readdir)
-signal (man 2 signal)
-stat (__xstat) (man 2 stat)
-lstat (__lxstat) (man 2 lstat)
-fstat (__fxstat) (man 2 fstat)
-strtok (man 3 strtok)
-wait (man 2 wait)
-waitpid (man 2 waitpid)
-wait3 (man 2 wait3)
-wait4 (man 2 wait4)
-write (man 2 write)
 
+Function (man)	File(s) where its likely used
+access (man 2)	parser.c, shell_loop.c
+chdir (man 2)	builtin.c, builtin1.c
+close (man 2)	getLine.c, parser.c, main.c
+closedir (man 3)	getenv.c, shell_loop.c
+execve (man 2)	shell_loop.c, parser.c
+exit (man 3)	exits.c, main.c, shell_loop.c
+_exit (man 2)	exits.c, main.c
+fflush (man 3)	getLine.c, errors.c
+fork (man 2)	shell_loop.c, main.c
+free (man 3)	memory.c, getLine.c, vars.c, lists.c
+getcwd (man 3)	builtin.c, builtin1.c
+getline (man 3)	getLine.c
+getpid (man 2)	shell_loop.c
+isatty (man 3)	_atoi.c, main.c
+kill (man 2)	shell_loop.c
+malloc (man 3)	memory.c, getLine.c, string.c
+open (man 2)	history.c, getLine.c
+opendir (man 3)	getenv.c, builtin1.c
+perror (man 3)	errors.c, parser.c
+read (man 2)	getLine.c, parser.c
+readdir (man 3)	getenv.c, builtin1.c
+signal (man 2)	main.c, shell_loop.c
+stat (__xstat) (man 2)	parser.c, shell_loop.c
+lstat (__lxstat) (man 2)	parser.c, shell_loop.c
+fstat (__fxstat) (man 2)	parser.c, main.c
+strtok (man 3)	tokenizer.c, parser.c
+wait (man 2)	shell_loop.c, main.c
+waitpid (man 2)	shell_loop.c, main.c
+wait3 (man 2)	Possibly unused  rarely seen
+wait4 (man 2)	Possibly unused  rarely seen
+write (man 2)	errors.c, getLine.c, shell_loop.c
 # Compilation
 ## Your shell will be compiled this way:
 
