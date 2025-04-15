@@ -1,9 +1,92 @@
 
 ![Holberton school logo](https://secure.meetupstatic.com/photos/event/b/c/5/6/highres_475548214.jpeg)
-# simple_shell project repository
+
+# Simple Shell Project
 
 This repository contains the files for Holberton's **simple_shell**. It can be compiled using GCC and will execute a simple shell that can be used for some basic tasks and programs most commonly found in the /bin/ folder.
 
+##  Overview
+
+The **Simple Shell** is a basic Unix command-line interpreter developed in C, aiming to replicate some core functionalities of the Bourne shell (`sh`). It allows users to interact with the operating system by executing commands typed into a terminal. This project was built as part of the Holberton School curriculum to strengthen understanding of system calls, processes, memory management, and file descriptors.
+
+---
+
+## Installation & Usage
+
+### Compilation
+
+To compile the shell, use the following command:
+
+## Your shell will be compiled this way:
+
+`gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh`
+
+---
+##Running the Shell
+After compilation, start the shell with:
+
+'./hsh'
+
+
+The shell can run in interactive mode or non-interactive mode:
+
+#Interactive mode:
+
+'$ ./hsh
+$ ls -l
+$ exit '
+
+
+#Non-interactive mode:
+'echo "ls -l" | ./hsh'
+----
+## Usage Examples:
+'$ /bin/ls
+$ pwd
+$ echo Hello, World!
+$ env
+$ exit'
+
+You can also use relative or absolute paths and commands from $PATH.
+---
+## Requirements:
+Ubuntu 20.04 LTS
+
+gcc compiler
+
+Knowledge of:
+
+C programming
+
+Linux system calls (fork, execve, wait, etc.)
+
+Memory handling (malloc, free)
+
+Environment variables
+
+File I/O (read, write, close)
+
+---
+##Learning Objectives
+How a shell works behind the scenes
+
+Use of system calls like execve, fork, wait, access
+
+Handling environment variables
+
+Parsing and tokenizing strings
+
+Managing memory dynamically
+
+Building user-friendly command-line tools
+
+---
+## Known Bugs:
+
+Commands with pipes (|) or redirections (>, <) are not supported yet.
+
+History, aliasing, and advanced shell features are not implemented.
+---
 # Pre-requisites
 # Learning Objectives
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
