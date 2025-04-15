@@ -27,8 +27,8 @@ To compile the shell, use the following command:
 After compilation, start the shell with:
 
 `./hsh`
----
-##The shell can run in interactive mode or non-interactive mode:
+
+#The shell can run in interactive mode or non-interactive mode:
 
 #Interactive mode:
 
@@ -40,7 +40,7 @@ $ exit `
 
 `echo "ls -l" | ./hsh`
 
-----
+---
 ## Usage Examples:
 
 `$ /bin/ls
