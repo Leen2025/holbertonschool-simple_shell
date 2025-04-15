@@ -84,71 +84,71 @@ $
 `gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh`
 
 
-# files
-##Project Files and Descriptions
-README.md  Contains the description and overview of the project.
+## files
+#Project Files and Descriptions
+'README.md'  Contains the description and overview of the project.
 
-man_1_simple_shell  Manual page for the simple shell program.
+'man_1_simple_shell'  Manual page for the simple shell program.
 
-AUTHORS  Lists all contributors to the repository.
+'AUTHORS'  Lists all contributors to the repository.
 
-shell.h  Header file with standard library includes, macros, and function prototypes used throughout the program.
+'shell.h'  Header file with standard library includes, macros, and function prototypes used throughout the program.
 
-## Core Program Files
-main.c  Entry point of the program. Starts an infinite loop and calls the shell prompt.
+# Core Program Files
+'main.c'  Entry point of the program. Starts an infinite loop and calls the shell prompt.
 
-shell_loop.c  Handles the main execution loop of the shell including reading, parsing, and executing user commands.
+'shell_loop.c'  Handles the main execution loop of the shell including reading, parsing, and executing user commands.
 
-getLine.c  Contains the implementation of input reading using getline.
+'getLine.c'  Contains the implementation of input reading using getline.
 
-parser.c  Parses the user input to separate commands and arguments.
+'parser.c'  Parses the user input to separate commands and arguments.
 
-tokenizer.c  Splits the command line input into tokens for processing.
+'tokenizer.c'  Splits the command line input into tokens for processing.
 
-execute.c  (renamed to hsh or included functionality under shell_loop.c)  Executes user commands using fork and execve.
+'execute.c'  (renamed to hsh or included functionality under shell_loop.c)  Executes user commands using fork and execve.
 
-cmd.c  (assumed included in parser.c or shell_loop.c)  Finds the correct command path in the system.
+'cmd.c'  (assumed included in parser.c or shell_loop.c)  Finds the correct command path in the system.
 
-special_character  (logic likely split between builtin.c, exits.c, or shell_loop.c)  Handles special input cases like exit, env, and path-related behavior.
+'special_character'  (logic likely split between builtin.c, exits.c, or shell_loop.c)  Handles special input cases like exit, env, and path-related behavior.
 
-## Utilities and Helpers
-_atoi.c  Contains utility functions like _atoi, _isalpha, and helpers to check delimiters or interactive mode.
+# Utilities and Helpers
+'_atoi.c'  Contains utility functions like _atoi, _isalpha, and helpers to check delimiters or interactive mode.
 
-string.c  Implements string functions like _strlen, _strcpy, _strcmp, _strcat.
+'string.c'  Implements string functions like _strlen, _strcpy, _strcmp, _strcat.
 
-string1.c  Additional string manipulation functions.
+'string1.c'  Additional string manipulation functions.
 
-memory.c  Functions related to dynamic memory handling like memcpy, realloc, and freeing.
+'memory.c'  Functions related to dynamic memory handling like memcpy, realloc, and freeing.
 
-realloc.c  Handles custom reallocation logic.
+'realloc.c'  Handles custom reallocation logic.
 
-lists.c  Linked list implementation for managing command history, environment, etc.
+'lists.c'  Linked list implementation for managing command history, environment, etc.
 
-lists1.c  Additional list manipulation functions.
+'lists1.c'  Additional list manipulation functions.
 
- Shell Features and Builtins
-builtin.c  Implements built-in shell commands like exit, env, etc.
+#Shell Features and Builtins
+'builtin.c'  Implements built-in shell commands like exit, env, etc.
 
-builtin1.c  Additional built-in functionality.
+'builtin1.c'  Additional built-in functionality.
 
-getenv.c  Custom implementation of getenv and environment variable retrieval.
+'getenv.c'  Custom implementation of getenv and environment variable retrieval.
 
-environ.c  Manages shell environment variables.
+'environ.c'  Manages shell environment variables.
 
-getinfo.c  Handles storage and updating of runtime info (info_t struct).
+'getinfo.c'  Handles storage and updating of runtime info (info_t struct).
 
-vars.c  Manages shell variables and replacement (like $?, $$).
+'vars.c'  Manages shell variables and replacement (like $?, $$).
 
-exits.c  Contains logic for properly exiting the shell.
+'exits.c'  Contains logic for properly exiting the shell.
 
-history.c Handles history features, loading/saving command history to .simple_shell_history.
+'history.c' Handles history features, loading/saving command history to .simple_shell_history.
 
 # Error Handling
-errors.c  Handles formatted error messages.
+'errors.c'  Handles formatted error messages.
 
-errors1.c  Additional error utilities.
+'errors1.c'  Additional error utilities.
 
-err_num  Likely tracks error number state for returning status codes.
+'err_num'  Likely tracks error number state for returning status codes.
 ## How to add Author file
 `Bash script for generating the list of authors in git repo`
 ```
