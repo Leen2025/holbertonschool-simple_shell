@@ -48,39 +48,36 @@ $ echo "qwerty" | ./././hsh
 $
 
 # List of allowed functions and system calls
-
-Function (man)	File(s) where its likely used
-access (man 2)	parser.c, shell_loop.c
-chdir (man 2)	builtin.c, builtin1.c
-close (man 2)	getLine.c, parser.c, main.c
-closedir (man 3)	getenv.c, shell_loop.c
-execve (man 2)	shell_loop.c, parser.c
-exit (man 3)	exits.c, main.c, shell_loop.c
-_exit (man 2)	exits.c, main.c
-fflush (man 3)	getLine.c, errors.c
-fork (man 2)	shell_loop.c, main.c
-free (man 3)	memory.c, getLine.c, vars.c, lists.c
-getcwd (man 3)	builtin.c, builtin1.c
-getline (man 3)	getLine.c
-getpid (man 2)	shell_loop.c
-isatty (man 3)	_atoi.c, main.c
-kill (man 2)	shell_loop.c
-malloc (man 3)	memory.c, getLine.c, string.c
-open (man 2)	history.c, getLine.c
-opendir (man 3)	getenv.c, builtin1.c
-perror (man 3)	errors.c, parser.c
-read (man 2)	getLine.c, parser.c
-readdir (man 3)	getenv.c, builtin1.c
-signal (man 2)	main.c, shell_loop.c
-stat (__xstat) (man 2)	parser.c, shell_loop.c
-lstat (__lxstat) (man 2)	parser.c, shell_loop.c
-fstat (__fxstat) (man 2)	parser.c, main.c
-strtok (man 3)	tokenizer.c, parser.c
-wait (man 2)	shell_loop.c, main.c
-waitpid (man 2)	shell_loop.c, main.c
-wait3 (man 2)	Possibly unused  rarely seen
-wait4 (man 2)	Possibly unused  rarely seen
-write (man 2)	errors.c, getLine.c, shell_loop.c
+- access (man 2 access)
+- chdir (man 2 chdir)
+- close (man 2 close)
+- closedir (man 3 closedir)
+- execve (man 2 execve)
+- exit (man 3 exit)
+- _exit (man 2 _exit)
+- fflush (man 3 fflush)
+- fork (man 2 fork)
+- free (man 3 free)
+- getcwd (man 3 getcwd)
+- getline (man 3 getline)
+- isatty (man 3 isatty)
+- kill (man 2 kill)
+- malloc (man 3 malloc)
+- open (man 2 open)
+- opendir (man 3 opendir)
+- perror (man 3 perror)
+- read (man 2 read)
+- readdir (man 3 readdir)
+- signal (man 2 signal)
+- stat (__xstat) (man 2 stat)
+- lstat (__lxstat) (man 2 lstat)
+- fstat (__fxstat) (man 2 fstat)
+- strtok (man 3 strtok)
+- wait (man 2 wait)
+- waitpid (man 2 waitpid)
+- wait3 (man 2 wait3)
+- wait4 (man 2 wait4)
+- write (man 2 write)
 # Compilation
 ## Your shell will be compiled this way:
 
@@ -88,17 +85,70 @@ write (man 2)	errors.c, getLine.c, shell_loop.c
 
 
 # files
-- README.md - description about the project repo
-- man_1_simple_shell - is the man page for the shell we are going to write.
-- AUTHORS - file at the  root of your repository, listing all individuals having contributed content to the repository. 
-- main.h - is the header file which contains the standared header file and prototype of o function used in the program.
-- main.c - initialize the program with infinite loop by call the prompt function
-- prompt.c - it use getline system call to read the input from the user and run infinite loop with fork to keep prompt going.
-- special_character - It identiies if the special inputs such as if the frist input is slash,the user typed exit or env...
-- string.c -it handles the strings(string length, write string,find string in directory,concatane strings....)
-- cmd.c - it finds the command the user entered.
-- execute.c - execute the command.
+##Project Files and Descriptions
+README.md  Contains the description and overview of the project.
 
+man_1_simple_shell  Manual page for the simple shell program.
+
+AUTHORS  Lists all contributors to the repository.
+
+shell.h  Header file with standard library includes, macros, and function prototypes used throughout the program.
+
+## Core Program Files
+main.c  Entry point of the program. Starts an infinite loop and calls the shell prompt.
+
+shell_loop.c  Handles the main execution loop of the shell including reading, parsing, and executing user commands.
+
+getLine.c  Contains the implementation of input reading using getline.
+
+parser.c  Parses the user input to separate commands and arguments.
+
+tokenizer.c  Splits the command line input into tokens for processing.
+
+execute.c  (renamed to hsh or included functionality under shell_loop.c)  Executes user commands using fork and execve.
+
+cmd.c  (assumed included in parser.c or shell_loop.c)  Finds the correct command path in the system.
+
+special_character  (logic likely split between builtin.c, exits.c, or shell_loop.c)  Handles special input cases like exit, env, and path-related behavior.
+
+## Utilities and Helpers
+_atoi.c  Contains utility functions like _atoi, _isalpha, and helpers to check delimiters or interactive mode.
+
+string.c  Implements string functions like _strlen, _strcpy, _strcmp, _strcat.
+
+string1.c  Additional string manipulation functions.
+
+memory.c  Functions related to dynamic memory handling like memcpy, realloc, and freeing.
+
+realloc.c  Handles custom reallocation logic.
+
+lists.c  Linked list implementation for managing command history, environment, etc.
+
+lists1.c  Additional list manipulation functions.
+
+ Shell Features and Builtins
+builtin.c  Implements built-in shell commands like exit, env, etc.
+
+builtin1.c  Additional built-in functionality.
+
+getenv.c  Custom implementation of getenv and environment variable retrieval.
+
+environ.c  Manages shell environment variables.
+
+getinfo.c  Handles storage and updating of runtime info (info_t struct).
+
+vars.c  Manages shell variables and replacement (like $?, $$).
+
+exits.c  Contains logic for properly exiting the shell.
+
+history.c Handles history features, loading/saving command history to .simple_shell_history.
+
+# Error Handling
+errors.c  Handles formatted error messages.
+
+errors1.c  Additional error utilities.
+
+err_num  Likely tracks error number state for returning status codes.
 ## How to add Author file
 `Bash script for generating the list of authors in git repo`
 ```
