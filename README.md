@@ -20,13 +20,14 @@ To compile the shell, use the following command:
 
 `gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh`
 
+---
 
 ##Running the Shell:
 
 After compilation, start the shell with:
 
 `./hsh`
-
+---
 ##The shell can run in interactive mode or non-interactive mode:
 
 #Interactive mode:
@@ -35,7 +36,6 @@ After compilation, start the shell with:
 $ ls -l
 $ exit `
 
----
 #Non-interactive mode:
 
 `echo "ls -l" | ./hsh`
