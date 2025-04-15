@@ -36,18 +36,21 @@ int _isalpha(int c)
 		return (0);
 }
 /**
- *_atoi - converts a string to an integer
- *@s: the string to be converted
- *Return: 0 if no numbers in string, converted number otherwise
+ * _atoi - converts a string to an integer
+ * @s: the string to be converted
+ *
+ * Return: the converted integer
  */
 int _atoi(char *s)
 {
-	int i, sign = 1, flag = 0, output;
+	int i, sign = 1, flag = 0;
 	unsigned int result = 0;
-	for (i = 0;  s[i] != '\0' && flag != 2; i++)
+
+	for (i = 0; s[i] != '\0' && flag != 2; i++)
 	{
 		if (s[i] == '-')
 			sign *= -1;
+
 		if (s[i] >= '0' && s[i] <= '9')
 		{
 			flag = 1;
@@ -55,11 +58,10 @@ int _atoi(char *s)
 			result += (s[i] - '0');
 		}
 		else if (flag == 1)
+		{
 			flag = 2;
+		}
 	}
-	if (sign == -1)
-		output = -result;
-	else
-		output = result;
-	return (output);
+
+	return (sign == -1 ? -result : result);
 }
