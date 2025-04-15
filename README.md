@@ -22,21 +22,21 @@ To compile the shell, use the following command:
 
 ---
 
-##Running the Shell:
+##  Running the Shell:
 
 After compilation, start the shell with:
 
 `./hsh`
 
-#The shell can run in interactive mode or non-interactive mode:
+#  The shell can run in interactive mode or non-interactive mode:
 
-#Interactive mode:
+#  Interactive mode:
 
 `$ ./hsh
 $ ls -l
 $ exit `
 
-#Non-interactive mode:
+#  Non-interactive mode:
 
 `echo "ls -l" | ./hsh`
 
@@ -69,7 +69,7 @@ Environment variables
 File I/O (read, write, close)
 
 ---
-#Learning Objectives:
+## Learning Objectives:
 How a shell works behind the scenes
 
 Use of system calls like execve, fork, wait, access
