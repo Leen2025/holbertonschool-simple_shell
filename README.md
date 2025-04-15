@@ -85,10 +85,21 @@ Building user-friendly command-line tools
 ---
 ## Known Bugs:
 
-Commands with pipes (|) or redirections (>, <) are not supported yet.
+The shell does not support command chaining with &&, ||, or ;
+
+No support for file redirection or piping
+
+No advanced error handling (segfault detection etc.)
 
 History, aliasing, and advanced shell features are not implemented.
 ---
+# License
+
+```yaml
+License: For educational purposes only.
+```
+---
+
 # Pre-requisites
 ##Learning Objectives
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
