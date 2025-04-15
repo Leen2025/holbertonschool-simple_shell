@@ -12,7 +12,7 @@ The **Simple Shell** is a basic Unix command-line interpreter developed in C, ai
 ---
 ## Installation & Usage
 
-### Compilation
+## Compilation
 
 To compile the shell, use the following command:
 
@@ -20,14 +20,13 @@ To compile the shell, use the following command:
 
 `gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh`
 
----
+
 ##Running the Shell:
 
 After compilation, start the shell with:
 
 `./hsh`
 
----
 ##The shell can run in interactive mode or non-interactive mode:
 
 #Interactive mode:
@@ -70,7 +69,7 @@ Environment variables
 File I/O (read, write, close)
 
 ---
-##Learning Objectives
+#Learning Objectives:
 How a shell works behind the scenes
 
 Use of system calls like execve, fork, wait, access
