@@ -8,9 +8,7 @@ This repository contains the files for Holberton's **simple_shell**. It can be c
 ##  Overview
 
 The **Simple Shell** is a basic Unix command-line interpreter developed in C, aiming to replicate some core functionalities of the Bourne shell (`sh`). It allows users to interact with the operating system by executing commands typed into a terminal. This project was built as part of the Holberton School curriculum to strengthen understanding of system calls, processes, memory management, and file descriptors.
-
 ---
-
 ## Installation & Usage
 
 ### Compilation
@@ -25,27 +23,28 @@ To compile the shell, use the following command:
 ##Running the Shell
 After compilation, start the shell with:
 
-'./hsh'
+`./hsh`
 
 
-The shell can run in interactive mode or non-interactive mode:
-
+##The shell can run in interactive mode or non-interactive mode:
 #Interactive mode:
 
-'$ ./hsh
+`$ ./hsh
 $ ls -l
-$ exit '
+$ exit `
 
 
 #Non-interactive mode:
-'echo "ls -l" | ./hsh'
+
+`echo "ls -l" | ./hsh`
 ----
 ## Usage Examples:
-'$ /bin/ls
+
+`$ /bin/ls
 $ pwd
 $ echo Hello, World!
 $ env
-$ exit'
+$ exit`
 
 You can also use relative or absolute paths and commands from $PATH.
 ---
@@ -105,7 +104,7 @@ What are the three prototypes of main
 How does the shell use the PATH to find the programs
 How to execute another program with the execve system call
 How to suspend the execution of a process until one of its children terminates
-What is EOF / “end-of-file”?
+What is EOF / end-of-file ?
 # Requirements
 
 # GitHub
