@@ -84,7 +84,9 @@ $
 `gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh`
 
 
-## Project Files and Descriptions
+## Project Files and Descriptions:
+
+
 ##  Core Program Files
 
 | File            | Description |
