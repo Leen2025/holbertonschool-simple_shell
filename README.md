@@ -143,7 +143,9 @@ $ echo "qwerty" | ./././hsh
 ./././hsh: 1: qwerty: not found
 $
 
-gained hands-on experience and deepened our understanding of several core computer science concepts, including:
+##  Learning Highlights 
+
+Throughout the development of this project, we gained hands-on experience and deepened our understanding of several core computer science concepts, including:
 
 - **Process Creation & Management**
   Learned how to create child processes using `fork()` and how to manage them with `wait()`, `waitpid()`, etc.
