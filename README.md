@@ -143,6 +143,36 @@ $ echo "qwerty" | ./././hsh
 ./././hsh: 1: qwerty: not found
 $
 
+gained hands-on experience and deepened our understanding of several core computer science concepts, including:
+
+- **Process Creation & Management**
+  Learned how to create child processes using `fork()` and how to manage them with `wait()`, `waitpid()`, etc.
+
+- **System Calls & Program Execution**
+  Understood how to execute other programs from within a C program using `execve()` and how system-level calls differ from standard library functions.
+
+- **File Descriptors and I/O**
+  Worked with low-level file operations like `read()`, `write()`, and `close()`, reinforcing how UNIX handles I/O behind the scenes.
+
+- **Environment Variables**
+  Manipulated and retrieved environment variables using custom logic and built-in pointers like `environ`.
+
+- **Memory Management**
+  Practiced dynamic memory allocation (`malloc`, `realloc`, `free`) and ensured memory was handled safely to avoid leaks or corruption.
+
+- **Command Parsing & Tokenization**
+  Built a tokenizer using `strtok()` to parse user input into commands and arguments.
+
+- **Building Shell Features from Scratch**
+  Implemented built-in commands like `exit` and `env`, and handled relative and absolute paths with a basic understanding of the `$PATH` variable.
+
+- **Error Handling & Edge Cases**
+  Dealt with real-world shell behaviors such as invalid commands, empty inputs, and missing files, and created user-friendly error messages.
+
+- **Working in a Team**
+  Practiced version control, collaboration, and workflow coordination using Git and GitHub for a shared repository.
+  ~
+
 # List of allowed functions and system calls
 - access (man 2 access)
 - chdir (man 2 chdir)
