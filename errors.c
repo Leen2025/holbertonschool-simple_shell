@@ -8,10 +8,10 @@
  */
 void _eputs(char *str)
 {
-	int i = 0;
+int i = 0;
 
-	if (!str)
-		return;
+if (!str)
+return;
 	while (str[i] != '\0')
 	{
 		_eputchar(str[i]);
